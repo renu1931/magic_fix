@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import { Link } from "react-router-dom";
 import image1 from "../images/image1.webp";
 import gift_box from "../images/gift_box.png";
+import BrideGroom from "./BrideGroom";
 
 export default function HomePage() {
   function sendEmail(e) {
@@ -105,6 +106,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      <BrideGroom />
     </div>
   );
 }
