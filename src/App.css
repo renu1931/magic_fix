@@ -26,6 +26,15 @@
     background-position: center;
     opacity: 3;
   }
+  #form-img-div {
+    background-attachment: fixed;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    opacity: 3;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   #mmw-img-div1 {
     background-size: cover;
     background-position: center;
@@ -157,6 +166,19 @@
     font-weight: 900;
     color: black;
   }
+  #form-input {
+    width: 98%;
+    background: rgb(255, 245, 245);
+   padding-top: 10px;
+    padding-bottom: 10px;
+    /* margin-bottom: 15px; */
+    padding-left: 1rem;
+    outline: 1px solid rgb(196, 194, 194);
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+    color: black;
+  }
   #input {
     border-radius: 5px;
     margin-top: 15px;
@@ -268,5 +290,20 @@
 #menu-h4{
   font-size: 18px;
   font-weight: 600;
+}
+#form-title{
+  color: #fff;
+  text-align: center;
+  font-weight: bolder;
+  padding: 50px 0px;
+}
+#homepage-small{
+  color: red;
+  font-weight: 600;
+  padding: 5px;
+  width: 32%;
+  border-radius: 5px;
+  font-size: 12px;
+  margin: 2px;
 }
 

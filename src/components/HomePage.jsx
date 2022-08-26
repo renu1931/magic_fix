@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { Link } from "react-router-dom";
 import image1 from "../images/image1.webp";
 import gift_box from "../images/gift_box.png";
 import BrideGroom from "./BrideGroom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function HomePage() {
   function sendEmail(e) {
@@ -19,7 +21,17 @@ export default function HomePage() {
         console.log(res);
       })
       .catch((err) => console.log(err));
+    e.target.reset();
   }
+  const diffToast = () => {
+    toast.success("Registration Sucessfully!", {
+      position: "top-center",
+    });
+  };
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [Phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
   return (
     <div>
       <div
@@ -67,6 +79,8 @@ export default function HomePage() {
                     placeholder="Name"
                     id="input"
                     name="name"
+                    defaultValue=""
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
                 <div>
@@ -75,6 +89,8 @@ export default function HomePage() {
                     name="user_email"
                     placeholder="Enter Email"
                     id="input1"
+                    defaultValue=""
+                    onChange={(e) => setEmail(e.target.value)}
                   ></input>
                 </div>
 
@@ -84,6 +100,8 @@ export default function HomePage() {
                     id="input1"
                     maxLength={10}
                     name="phone"
+                    defaultValue=""
+                    onChange={(e) => setPhone(e.target.value)}
                   />
                 </div>
                 <div>
@@ -92,10 +110,18 @@ export default function HomePage() {
                     name="message"
                     placeholder="Describe your self  or  ask us a question"
                     id="input2"
+                    defaultValue=""
+                    onChange={(e) => setMessage(e.target.value)}
                   />
                 </div>
                 <br></br>
-                <input type="submit" value="Submit" id="input-btn" />
+                <input
+                  type="submit"
+                  value="Submit"
+                  id="input-btn"
+                  onClick={diffToast}
+                  disabled={!name || !email || !Phone || !message}
+                />
                 <br />
                 <p id="magic-fix-terms-conditions">
                   By registering, you agree to our
@@ -106,6 +132,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      <ToastContainer />
       <BrideGroom />
     </div>
   );
