@@ -43,16 +43,19 @@ export default function BrideGroom() {
           {items.map((elem) => {
             const { id, name, image, description, age } = elem;
             return (
-              <div className="col-md-5 mx-auto " key={id} id="menu-container">
-                <div className="row">
+              <div
+                className="col-md-5 mx-auto mb-5"
+                key={id}
+                id="menu-container"
+              >
+                <div className="row pb-5">
                   <div className="col-md-4">
                     <img
                       src={image}
                       aria-hidden
                       alt="image-1"
                       id="menu-image"
-                      height={170}
-                      width={170}
+                      className="img-fluid"
                     />
                   </div>
                   <div className="col-md-8" id="menu-heading-container">

@@ -12,12 +12,13 @@
     background-color:#00000073;
     position: relative;
   }
-  #google {
-    position: fixed;
-    top: 87%;
-    left: 1%;
-    border-radius: 8px;
-    z-index: 999;
+  #background-black::before{
+    content: "";
+    color: #fff;
+    background-color:#0000008f;
+    position: absolute;
+    height: 663px;
+    width: 100%;
   }
   #mmw-img-div {
     background-attachment: fixed;
@@ -260,27 +261,21 @@
   background-color: rgb(219, 196, 196);
 } */
 #menu-image{
- border-radius: 50%;
+ border-radius: 10px;
+ transition: transform .2s; 
  background-position: center;
- border: 8px solid#0807074f;
+ border: 5px solid#0807074f;
  }
-#menu-image:hover{
-  animation: rotateplayer 3s linear infinite ;
-}
-@keyframes rotateplayer{
-  from{
-      transform: rotate(0deg);
-}
-  to{
-      transform: rotate(360deg);  
-  }
-}
+ /* #menu-image:hover{
+  transform: scale(1.5);
+ } */
 #menu-heading-container{
   padding-left: 40px;
   padding-top: 30px;
 }
 #menu-h3{
   font-weight: 900;
+  font-size: 35px;
   text-shadow: 1px 1px 1px black;
 }
 #menu-h5{
@@ -299,6 +294,7 @@
 }
 #homepage-small{
   color: red;
+  text-shadow: 1px 1px 1px red;
   font-weight: 600;
   padding: 5px;
   width: 32%;
@@ -306,4 +302,41 @@
   font-size: 12px;
   margin: 2px;
 }
+#homepage-small1{
+  color: red;
+  text-shadow: 1px 1px 1px red;
+  font-weight: 600;
+  padding: 5px;
+  width: 42%;
+  border-radius: 5px;
+  font-size: 12px;
+  margin: 2px;
+}
 
+/* coupleSlider css start */
+#organise-h1{
+  padding-bottom: 20px;
+  padding-top: 50px;
+  text-shadow: 1px 1px  rgb(245, 79, 176);
+  font-weight: 900;
+}
+#organise-h1 span{
+color:  rgb(245, 79, 176);
+}
+
+#organise-p{
+  font-family: 'Josefin Sans', sans-serif; 
+  font-weight: 800;
+  line-height: 30px;
+  font-size: 18px;
+  padding-right: 20px;
+}
+#organise-p i{
+color:  rgb(245, 79, 176);
+padding-right: 5px;
+}
+#slider-image{
+height: 375px;
+padding-left:30px;
+padding-right: 30px;
+}

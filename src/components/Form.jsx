@@ -1,8 +1,21 @@
-import React from "react";
-import image4 from "../images/image4.jfif";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import image4 from "../images/image4.jpg";
 import { useForm } from "react-hook-form";
 
 function Form() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [motherTongue, setMotherTongue] = useState("");
+  const [country, setCountry] = useState("");
+  const [state, setState] = useState("");
+  const [city, setCity] = useState("");
+  const [pincode, setPincode] = useState("");
+  const [birth, setBirth] = useState("");
+  const [hobby, setHobby] = useState("");
   const {
     register,
     handleSubmit,
@@ -11,28 +24,24 @@ function Form() {
     mode: "onTouched",
   });
   console.log(errors);
-  const onSubmit = (inputs) => {
-    console.log("inputs==============>", inputs);
-    localStorage.setItem("inputs", JSON.stringify(inputs));
+  const onSubmit = (data) => {
+    console.log(data);
   };
-  // const [inputs, setInputs] = useState({});
-  // const [formError, setFormError] = useState({});
+  const handle = () => {
+    localStorage.setItem("firstname", firstName);
+    localStorage.setItem("lastname", lastName);
+    localStorage.setItem("email", email);
+    localStorage.setItem("phone", phone);
+    localStorage.setItem("address", address);
+    localStorage.setItem("mother-tongue", motherTongue);
+    localStorage.setItem("country", country);
+    localStorage.setItem("state", state);
+    localStorage.setItem("city", city);
+    localStorage.setItem("pincode", pincode);
+    localStorage.setItem("DOB", birth);
+    localStorage.setItem("hobby", hobby);
+  };
 
-  // const handleData = () => {
-  //   setInputs({
-  //     first_name: "",
-  //     last_name: "",
-  //     user_email: "",
-  //     phone: "",
-  //     address: "",
-  //     country: "",
-  //     state: "",
-  //     city: "",
-  //     pincode: "",
-  //     hobbies: "",
-  //   });
-  //   setFormError(inputs);
-  // };
   return (
     <div>
       <div
@@ -63,6 +72,7 @@ function Form() {
                   })}
                   name="first_name"
                   id="form-input"
+                  onChange={(e) => setFirstName(e.target.value)}
                 />
 
                 <div id="homepage-small">
@@ -78,6 +88,7 @@ function Form() {
                   })}
                   name="last_name"
                   id="form-input"
+                  onChange={(e) => setLastName(e.target.value)}
                 />
 
                 <div id="homepage-small">
@@ -93,6 +104,7 @@ function Form() {
                   name="phone"
                   maxLength={10}
                   id="form-input"
+                  onChange={(e) => setPhone(e.target.value)}
                 />
                 <div id="homepage-small">
                   {errors.phone?.type === "required" && "Phone is Required"}
@@ -110,6 +122,7 @@ function Form() {
                   type="email"
                   id="form-input"
                   name="user_email"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <div id="homepage-small">
                   {errors.user_email?.type === "required" &&
@@ -122,6 +135,7 @@ function Form() {
                     required: "true",
                   })}
                   name="address"
+                  onChange={(e) => setAddress(e.target.value)}
                 />
                 <div id="homepage-small">
                   {errors.address?.type === "required" && "Address is Required"}
@@ -134,10 +148,11 @@ function Form() {
                   })}
                   id="form-input"
                   name="mother_tongue"
+                  onChange={(e) => setMotherTongue(e.target.value)}
                 />
                 <div id="homepage-small">
                   {errors.mother_tongue?.type === "required" &&
-                    "Mother Tongue is Required"}
+                    "This Field is Required"}
                 </div>
               </div>
               <div className="col-md-5 m-auto">
@@ -149,6 +164,7 @@ function Form() {
                   })}
                   id="form-input"
                   name="country"
+                  onChange={(e) => setCountry(e.target.value)}
                 />
                 <div id="homepage-small">
                   {errors.country?.type === "required" && "Country is Required"}
@@ -161,6 +177,7 @@ function Form() {
                     required: "true",
                   })}
                   name="state"
+                  onChange={(e) => setState(e.target.value)}
                 />
                 <div id="homepage-small">
                   {errors.state?.type === "required" && "State is Required"}
@@ -173,6 +190,7 @@ function Form() {
                   })}
                   id="form-input"
                   name="city"
+                  onChange={(e) => setCity(e.target.value)}
                 />
                 <div id="homepage-small">
                   {errors.city?.type === "required" && "City is Required"}
@@ -184,6 +202,7 @@ function Form() {
                   })}
                   name="pincode"
                   id="form-input"
+                  onChange={(e) => setPincode(e.target.value)}
                 />
                 <div id="homepage-small">
                   {errors.pincode?.type === "required" && "Pincode is Required"}
@@ -195,6 +214,7 @@ function Form() {
                     required: "true",
                   })}
                   name="birth"
+                  onChange={(e) => setBirth(e.target.value)}
                 />
                 <div id="homepage-small">
                   {errors.birth?.type === "required" &&
@@ -208,6 +228,7 @@ function Form() {
                   })}
                   id="form-input"
                   name="hobbies"
+                  onChange={(e) => setHobby(e.target.value)}
                 />
                 <div id="homepage-small">
                   {errors.hobbies?.type === "required" && "Enter Your Hobbies"}
@@ -216,7 +237,28 @@ function Form() {
             </div>
           </form>
           <div className="text-center pt-4">
-            <input type="submit" value="Submit" id="input-btn" />
+            <Link to="/form-details">
+              <input
+                type="submit"
+                value="Submit"
+                id="input-btn"
+                onClick={handle}
+                disabled={
+                  !firstName ||
+                  !lastName ||
+                  !phone ||
+                  !email ||
+                  !address ||
+                  !motherTongue ||
+                  !country ||
+                  !state ||
+                  !city ||
+                  !pincode ||
+                  !birth ||
+                  !hobby
+                }
+              />
+            </Link>
           </div>
         </div>
       </div>

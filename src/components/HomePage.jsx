@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { Link } from "react-router-dom";
-import image1 from "../images/image1.webp";
+import image4 from "../images/image5.jpg";
 import gift_box from "../images/gift_box.png";
 import BrideGroom from "./BrideGroom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import CoupleSlider from "./CoupleSlider";
 
 export default function HomePage() {
   function sendEmail(e) {
@@ -13,7 +14,7 @@ export default function HomePage() {
     emailjs
       .sendForm(
         "service_qf0wuua",
-        "template_2yyry2k",
+        "template_3kmlhek",
         e.target,
         "dEtlBLxtNvnbe93oG"
       )
@@ -37,7 +38,7 @@ export default function HomePage() {
       <div
         id="mmw-img-div"
         style={{
-          backgroundImage: "url(" + image1 + ")",
+          backgroundImage: "url(" + image4 + ")",
         }}
       >
         <div className="container-fluid " id="mmw-main-container">
@@ -134,6 +135,7 @@ export default function HomePage() {
       </div>
       <ToastContainer />
       <BrideGroom />
+      <CoupleSlider />
     </div>
   );
 }
