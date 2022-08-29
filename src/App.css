@@ -486,6 +486,12 @@ background: #8080804d;
     margin-left: -25px;
     }
 }
+@media only screen and (max-width: 400px) {
+  #background-black::before {
+    height: 1035px;
+   }
+   
+}
 @media only screen and (max-width: 280px) {
   #background-black::before {
     height: 1102px;
