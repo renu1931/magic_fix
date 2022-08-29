@@ -11,10 +11,11 @@ export default function Footer() {
       >
         <div
           className="row pt-5"
+          id="footer-row"
           style={{
             tectAlign: "center",
-            paddingLeft: "10rem",
-            marginRight: "10rem",
+            paddingLeft: "5rem",
+            marginRight: "5rem",
             justifyContent: "space-evenly",
           }}
         >
@@ -36,7 +37,6 @@ export default function Footer() {
               style={{
                 color: "white",
                 textAlign: "center",
-                paddingBottom: "2rem",
               }}
             >
               India's No.1 Matrimony
@@ -50,6 +50,7 @@ export default function Footer() {
                 color: "white",
                 fontWeight: "600",
                 fontSize: "23px",
+                paddingTop: "15px",
               }}
             >
               Phone No.
@@ -58,7 +59,6 @@ export default function Footer() {
               style={{
                 color: "white",
                 textAlign: "center",
-                paddingBottom: "2rem",
               }}
             >
               <i className="fa-solid fa-phone"></i> (+91)9354311177
@@ -71,6 +71,7 @@ export default function Footer() {
                 color: "white",
                 fontWeight: "600",
                 fontSize: "23px",
+                paddingTop: "15px",
               }}
             >
               Email
@@ -79,7 +80,6 @@ export default function Footer() {
               style={{
                 color: "white",
                 textAlign: "center",
-                paddingBottom: "2rem",
               }}
             >
               <i className="fa-solid fa-envelope"></i> jangsher.gill@gmail.com
@@ -92,6 +92,7 @@ export default function Footer() {
                 color: "white",
                 fontWeight: "600",
                 fontSize: "23px",
+                paddingTop: "15px",
               }}
             >
               Address
@@ -100,7 +101,6 @@ export default function Footer() {
               style={{
                 color: "white",
                 textAlign: "center",
-                paddingBottom: "2rem",
               }}
             >
               Magic Fix, Haryana, India

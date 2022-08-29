@@ -396,3 +396,109 @@ background: #8080804d;
   padding-bottom: 30px;
   font-weight: 600;
 }
+/* for responsive home page */
+@media only screen and (max-width: 1198px) {
+  #background-black::before {
+     height: 609px;
+    }
+}
+@media only screen and (max-width: 1140px) {
+  #organise-h1{
+     padding-top: 10px;
+    }
+    #background-black::before {
+      height: 549px;
+     }
+}
+@media only screen and (max-width: 988px) {
+  #background-black::before {
+     height: 669px;
+    }
+    #slider-image{
+      height: 350px;
+    }
+}
+@media only screen and (max-width: 766px) {
+  #input-div{
+    margin-right: 80px;
+  
+    }
+    #background-black::before {
+      height: 929px;
+     }
+     #menu-heading-container{
+      text-align: center;
+     }
+}
+@media only screen and (max-width: 568px) {
+  #input-div{
+    margin-right: 80px;
+    }
+    #background-black::before {
+      height: 898px;
+     }
+     #menu-heading-container{
+      text-align: center;
+     }
+}
+@media only screen and (max-width: 568px) {
+  #input-div{
+    margin-right: 80px;
+    }
+    #background-black::before {
+      height: 929px;
+     }
+}
+@media only screen and (max-width: 476px) {
+  #input-div{
+    margin-right: 80px;
+    }
+    #background-black::before {
+      height: 1005px;
+     }
+}
+@media only screen and (max-width: 404px) {
+  #input-div{
+    margin-right: 20px;
+    margin-left: -25px;
+    }
+    #background-black::before {
+      height: 1035px;
+     }
+}
+@media only screen and (max-width: 400px) {
+  #background-black::before {
+      height: 1035px;
+     }
+}
+@media only screen and (max-width: 375px) {
+  #background-black::before {
+    height: 1115px;
+   }
+}
+
+@media only screen and (max-width: 414px) {
+  #background-black::before {
+    height: 1115px;
+   }
+   #input-div{
+    margin-right: 20px;
+    margin-left: -25px;
+    }
+}
+@media only screen and (max-width: 280px) {
+  #background-black::before {
+    height: 1102px;
+   }
+   #footer-row{
+    margin-left: -30px;
+    margin-right: 10px;
+   }
+   #slider-image{
+    height: 200px;
+  }
+}
+
+
+
+
