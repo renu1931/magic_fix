@@ -46,10 +46,14 @@ export default function HomePage() {
         <div className="container-fluid " id="mmw-main-container">
           <div className="d-flex ml-5 pt-2">
             <h3 className="magic-fix-info">
-              <i className="fa-solid fa-phone"></i> (+91)9354311177
+              <a href="tel:9354311177" id="magic-fix-a">
+                <i className="fa-solid fa-phone"></i> (+91)9354311177
+              </a>
             </h3>
             <h3 className="magic-fix-info">
-              <i className="fa-solid fa-envelope"></i> jangsher.gill@gmail.com
+              <a href="mailto:support@gillwebs.com" id="magic-fix-a">
+                <i className="fa-solid fa-envelope"></i> jangsher.gill@gmail.com
+              </a>
             </h3>
           </div>
           <div className="d-flex ml-5">

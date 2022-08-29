@@ -396,6 +396,10 @@ background: #8080804d;
   padding-bottom: 30px;
   font-weight: 600;
 }
+#magic-fix-a{
+ color: #fff;
+ text-decoration: none;
+}
 /* for responsive home page */
 @media only screen and (max-width: 1198px) {
   #background-black::before {
@@ -504,7 +508,4 @@ background: #8080804d;
     height: 200px;
   }
 }
-
-
-
 
