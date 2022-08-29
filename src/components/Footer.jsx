@@ -50,7 +50,6 @@ export default function Footer() {
                 color: "white",
                 fontWeight: "600",
                 fontSize: "23px",
-                paddingTop: "15px",
               }}
             >
               Phone No.
@@ -71,7 +70,6 @@ export default function Footer() {
                 color: "white",
                 fontWeight: "600",
                 fontSize: "23px",
-                paddingTop: "15px",
               }}
             >
               Email
@@ -92,7 +90,6 @@ export default function Footer() {
                 color: "white",
                 fontWeight: "600",
                 fontSize: "23px",
-                paddingTop: "15px",
               }}
             >
               Address

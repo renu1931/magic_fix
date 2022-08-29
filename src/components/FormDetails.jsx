@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import image1 from "../images/image1.jpg";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 function Form() {
   const [qualifiaction, setQualification] = useState("");
@@ -37,6 +39,10 @@ function Form() {
     localStorage.setItem("physicalstatus", physicalStatus);
     localStorage.setItem("workcity", workCity);
     localStorage.setItem("workingstate", workingState);
+
+    toast.success("Registration Sucessfully!", {
+      position: "top-center",
+    });
   };
 
   return (
@@ -207,15 +213,30 @@ function Form() {
             </div>
           </form>
           <div className="text-center pt-4">
-            <input
-              type="submit"
-              value="Submit"
-              id="input-btn"
-              onClick={handle}
-            />
+            <Link to="/">
+              <input
+                type="submit"
+                value="Submit"
+                id="input-btn"
+                onClick={handle}
+                disabled={
+                  !qualifiaction ||
+                  !working ||
+                  !income ||
+                  !currency ||
+                  !martialStatus ||
+                  !familyStatus ||
+                  !familyType ||
+                  !physicalStatus ||
+                  !workCity ||
+                  !workingState
+                }
+              />
+            </Link>
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

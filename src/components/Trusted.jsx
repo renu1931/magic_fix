@@ -18,7 +18,7 @@ export default function Trusted() {
               objective - to help people find happiness. The company pioneered
               online matrimonials in 1996 and continues to lead the exciting
               matrimony category after more than a decade. By redefining the way
-              Indian brides and grooms meet for marriage, Shaadi.com has created
+              Indian brides and grooms meet for marriage, Magic Fix has created
               a world-renowned service that has touched over 35 million people
               <span id="trusted-btn">
                 Learn More <i className="fa-solid fa-caret-right"></i>
