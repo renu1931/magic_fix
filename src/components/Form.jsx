@@ -102,7 +102,7 @@ function Form() {
                     required: "true",
                   })}
                   name="phone"
-                  maxLength={10}
+                  type="number"
                   id="form-input"
                   onChange={(e) => setPhone(e.target.value)}
                 />
@@ -196,6 +196,7 @@ function Form() {
                   {errors.city?.type === "required" && "City is Required"}
                 </div>
                 <input
+                  type="number"
                   placeholder="Pincode"
                   {...register("pincode", {
                     required: "true",
