@@ -7,13 +7,15 @@ import BrideGroom from "./BrideGroom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CoupleSlider from "./CoupleSlider";
+import Trusted from "./Trusted";
+import Footer from "./Footer";
 
 export default function HomePage() {
   function sendEmail(e) {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_qf0wuua",
+        "service_5x7rego",
         "template_3kmlhek",
         e.target,
         "dEtlBLxtNvnbe93oG"
@@ -136,6 +138,8 @@ export default function HomePage() {
       <ToastContainer />
       <BrideGroom />
       <CoupleSlider />
+      <Trusted />
+      <Footer />
     </div>
   );
 }

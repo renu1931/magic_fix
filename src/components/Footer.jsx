@@ -1,0 +1,129 @@
+import React from "react";
+
+export default function Footer() {
+  return (
+    <div>
+      {/*footer start */}
+
+      <div
+        className="container-fluid pt-5 "
+        style={{ backgroundColor: "rgb(245, 79, 176)" }}
+      >
+        <div
+          className="row pt-5"
+          style={{
+            tectAlign: "center",
+            paddingLeft: "10rem",
+            marginRight: "10rem",
+            justifyContent: "space-evenly",
+          }}
+        >
+          <div
+            className="col-sm-3 "
+            style={{ borderBottom: "2px solid white" }}
+          >
+            <h5
+              style={{
+                textAlign: "center",
+                color: "white",
+                fontWeight: "600",
+                fontSize: "23px",
+              }}
+            >
+              Magic Fix
+            </h5>
+            <p
+              style={{
+                color: "white",
+                textAlign: "center",
+                paddingBottom: "2rem",
+              }}
+            >
+              India's No.1 Matrimony
+            </p>
+          </div>
+
+          <div className="col-sm-3" style={{ borderBottom: "2px solid white" }}>
+            <h5
+              style={{
+                textAlign: "center",
+                color: "white",
+                fontWeight: "600",
+                fontSize: "23px",
+              }}
+            >
+              Phone No.
+            </h5>
+            <p
+              style={{
+                color: "white",
+                textAlign: "center",
+                paddingBottom: "2rem",
+              }}
+            >
+              <i className="fa-solid fa-phone"></i> (+91)9354311177
+            </p>
+          </div>
+          <div className="col-sm-3" style={{ borderBottom: "2px solid white" }}>
+            <h5
+              style={{
+                textAlign: "center",
+                color: "white",
+                fontWeight: "600",
+                fontSize: "23px",
+              }}
+            >
+              Email
+            </h5>
+            <p
+              style={{
+                color: "white",
+                textAlign: "center",
+                paddingBottom: "2rem",
+              }}
+            >
+              <i className="fa-solid fa-envelope"></i> jangsher.gill@gmail.com
+            </p>
+          </div>
+          <div className="col-sm-3" style={{ borderBottom: "2px solid white" }}>
+            <h5
+              style={{
+                textAlign: "center",
+                color: "white",
+                fontWeight: "600",
+                fontSize: "23px",
+              }}
+            >
+              Address
+            </h5>
+            <p
+              style={{
+                color: "white",
+                textAlign: "center",
+                paddingBottom: "2rem",
+              }}
+            >
+              Magic Fix, Haryana, India
+            </p>
+          </div>
+
+          <div className="col-sm-12">
+            <h6
+              style={{
+                color: "white",
+                marginTop: "6rem",
+                textAlign: "center",
+                marginBottom: "1rem",
+                fontWeight: "600",
+              }}
+            >
+              Magic Fix © 2022. All Right Reserved, Designed By Gill Telecom
+              Service.
+            </h6>
+          </div>
+        </div>
+      </div>
+      {/*footer complete */}
+    </div>
+  );
+}

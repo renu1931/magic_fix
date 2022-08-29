@@ -14,10 +14,11 @@
   }
   #background-black::before{
     content: "";
+    z-index: 1;
     color: #fff;
-    background-color:#0000008f;
+    background-color:#0000005c;
     position: absolute;
-    height: 663px;
+    height: 649px;
     width: 100%;
   }
   #mmw-img-div {
@@ -317,8 +318,10 @@
 #organise-h1{
   padding-bottom: 20px;
   padding-top: 50px;
+  color: #fff;
   text-shadow: 1px 1px  rgb(245, 79, 176);
   font-weight: 900;
+  padding-left: 20px;
 }
 #organise-h1 span{
 color:  rgb(245, 79, 176);
@@ -329,14 +332,67 @@ color:  rgb(245, 79, 176);
   font-weight: 800;
   line-height: 30px;
   font-size: 18px;
-  padding-right: 20px;
+  padding-left: 20px;
 }
 #organise-p i{
 color:  rgb(245, 79, 176);
 padding-right: 5px;
 }
 #slider-image{
-height: 375px;
-padding-left:30px;
-padding-right: 30px;
+border-radius: 10px;
+transition: 1s;
+}
+#slider-image:hover{
+transform: scale(0.8);
+}
+/* Trusted section css */
+#trusted-btn{
+  border: none;
+  outline: none;
+  color: rgb(245, 79, 176);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 17px;
+  padding-left: 10px;
+}
+#trusted-line{
+  border-top: 2px solid #8080804a;
+  border-bottom: 2px solid #8080804a;
+  width: 70%;
+  font-weight: 600;
+ margin: auto;
+}
+#trusted-line p i{
+padding: 7px;
+cursor: pointer;
+border-radius: 50%;
+margin-right: 5px;
+color: rgb(245, 79, 176);
+background: #8080804d;
+}
+#trusted-btn1{
+  padding: 8px 20px;
+  background-color: rgb(245, 79, 176);
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 18px;
+}
+#trusted-h3{
+  color: rgb(245, 79, 176);
+  font-weight: 600;
+  font-size: 35px;
+  padding-top: 20px;
+  margin-top: 25px;
+  padding-bottom: 20px;
+  /* font-family: Raleway,sans-serif!important; */
+  letter-spacing: 1px;
+}
+#trusted-p{
+  padding-bottom: 30px;
+  font-weight: 600;
 }
