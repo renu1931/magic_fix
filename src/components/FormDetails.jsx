@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 import image1 from "../images/image1.jpg";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import swal from "sweetalert";
 
 function Form() {
   const [qualifiaction, setQualification] = useState("");
@@ -29,6 +29,12 @@ function Form() {
     console.log(data);
   };
   const handle = () => {
+    swal({
+      title: "Registration Successfully!!",
+      text: "Thanks For Visiting!",
+      icon: "success",
+      button: "OK!",
+    });
     localStorage.setItem("qualification", qualifiaction);
     localStorage.setItem("working", working);
     localStorage.setItem("income", income);
@@ -39,10 +45,6 @@ function Form() {
     localStorage.setItem("physicalstatus", physicalStatus);
     localStorage.setItem("workcity", workCity);
     localStorage.setItem("workingstate", workingState);
-
-    toast.success("Registration Sucessfully!", {
-      position: "top-center",
-    });
   };
 
   return (
@@ -236,7 +238,6 @@ function Form() {
           </div>
         </div>
       </div>
-      <ToastContainer />
     </div>
   );
 }

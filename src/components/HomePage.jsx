@@ -84,6 +84,7 @@ export default function HomePage() {
                     name="name"
                     defaultValue=""
                     onChange={(e) => setName(e.target.value)}
+                    required
                   />
                 </div>
                 <div>
@@ -94,6 +95,7 @@ export default function HomePage() {
                     id="input1"
                     defaultValue=""
                     onChange={(e) => setEmail(e.target.value)}
+                    required
                   ></input>
                 </div>
 
@@ -105,6 +107,7 @@ export default function HomePage() {
                     name="phone"
                     defaultValue=""
                     onChange={(e) => setPhone(e.target.value)}
+                    required
                   />
                 </div>
                 <div>
