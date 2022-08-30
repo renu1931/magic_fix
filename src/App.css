@@ -497,6 +497,15 @@ background: #8080804d;
   #background-black::before {
       height: 1035px;
      }
+     #props-div{
+      margin-left: 13px;
+     }
+}
+@media only screen and (max-width: 540px) {
+  
+     #props-div{
+      margin-left: 19px;
+     }
 }
 @media only screen and (max-width: 375px) {
   #background-black::before {
@@ -512,6 +521,9 @@ background: #8080804d;
     margin-right: 20px;
     margin-left: -25px;
     }
+    #props-div{
+      margin-left: 13px;
+     }
 }
 @media only screen and (max-width: 400px) {
   #background-black::before {

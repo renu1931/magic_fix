@@ -83,7 +83,7 @@ function Form(props) {
                   <p>Phone : {props.phone}</p>
                   <p>Email : {props.email}</p>
                   <p>Address : {props.address}</p>
-                  <p>Mother Tongue : {props.mothertongue}</p>
+                  <p>Gender : {props.gender}</p>
                 </div>
                 <div>
                   <p>Phone : {props.phone}</p>
@@ -189,7 +189,7 @@ function Form(props) {
                   {errors.currency?.type === "required" &&
                     "Currency is Required"}
                 </div>
-                <input
+                <select
                   placeholder="Martial Status"
                   id="form-input"
                   {...register("martialStatus", {
@@ -197,12 +197,18 @@ function Form(props) {
                   })}
                   name="martialStatus"
                   onChange={(e) => setMartialStatus(e.target.value)}
-                />
+                >
+                  <option value="">Martial Status</option>
+                  <option>Widow</option>
+                  <option>Married</option>
+                  <option>Unmarried</option>
+                  <option>Divorced</option>
+                </select>
                 <div id="homepage-small1">
                   {errors.martialStatus?.type === "required" &&
                     "Martial Status is Required"}
                 </div>
-                <input
+                <select
                   placeholder="Family Status"
                   type="text"
                   {...register("familyStatus", {
@@ -211,12 +217,17 @@ function Form(props) {
                   id="form-input"
                   name="familyStatus"
                   onChange={(e) => setFamilyStatus(e.target.value)}
-                />
+                >
+                  <option value="">Family Status</option>
+                  <option>Middle Class</option>
+                  <option>Upper Middle Class</option>
+                  <option>Rich/Affluent</option>
+                </select>
                 <div id="homepage-small">
                   {errors.familyStatus?.type === "required" &&
                     "Family Status is Required"}
                 </div>
-                <input
+                <select
                   placeholder="Family Type"
                   type="text"
                   {...register("familyType", {
@@ -225,12 +236,16 @@ function Form(props) {
                   id="form-input"
                   name="familyType"
                   onChange={(e) => setFamilyType(e.target.value)}
-                />
+                >
+                  <option value="">Family Type</option>
+                  <option>Joint Family</option>
+                  <option>Nuclear Family</option>
+                </select>
                 <div id="homepage-small">
                   {errors.familyType?.type === "required" &&
                     "Family type is Required"}
                 </div>
-                <input
+                <select
                   placeholder="Physical Status"
                   type="text"
                   id="form-input"
@@ -239,7 +254,11 @@ function Form(props) {
                   })}
                   name="physicalStatus"
                   onChange={(e) => setPhysicalStatus(e.target.value)}
-                />
+                >
+                  <option value="">Physical Status</option>
+                  <option>Normal</option>
+                  <option>Physically challenged</option>
+                </select>
                 <div id="homepage-small1">
                   {errors.physicalStatus?.type === "required" &&
                     "Physical Status is Required"}

@@ -10,7 +10,7 @@ function Form(props) {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
-  const [motherTongue, setMotherTongue] = useState("");
+  const [gender, setGender] = useState("");
   const [country, setCountry] = useState("");
   const [state, setState] = useState("");
   const [city, setCity] = useState("");
@@ -35,7 +35,7 @@ function Form(props) {
     localStorage.setItem("email", email);
     localStorage.setItem("phone", phone);
     localStorage.setItem("address", address);
-    localStorage.setItem("mother-tongue", motherTongue);
+    localStorage.setItem("gender", gender);
     localStorage.setItem("country", country);
     localStorage.setItem("state", state);
     localStorage.setItem("city", city);
@@ -161,18 +161,17 @@ function Form(props) {
                   {errors.address?.type === "required" && "Address is Required"}
                 </div>
                 <input
-                  placeholder="Mother Tongue"
+                  placeholder="Gender"
                   type="text"
-                  {...register("mother_tongue", {
+                  {...register("gender", {
                     required: "true",
                   })}
                   id="form-input"
-                  name="mother_tongue"
-                  onChange={(e) => setMotherTongue(e.target.value)}
+                  name="gender"
+                  onChange={(e) => setGender(e.target.value)}
                 />
                 <div id="homepage-small">
-                  {errors.mother_tongue?.type === "required" &&
-                    "This Field is Required"}
+                  {errors.gender?.type === "required" && "Gender is Required"}
                 </div>
               </div>
               <div className="col-md-5 m-auto">
@@ -269,7 +268,7 @@ function Form(props) {
                 !phone ||
                 !email ||
                 !address ||
-                !motherTongue ||
+                !gender ||
                 !country ||
                 !state ||
                 !city ||
@@ -287,7 +286,7 @@ function Form(props) {
         phone={phone}
         email={email}
         address={address}
-        mothertongue={motherTongue}
+        gender={gender}
         country={country}
         state={state}
         city={city}
