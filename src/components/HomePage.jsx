@@ -14,10 +14,10 @@ export default function HomePage() {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_5x7rego",
-        "template_2yyry2k",
+        "service_lgxvguv",
+        "template_xl2c2ux",
         e.target,
-        "dEtlBLxtNvnbe93oG"
+        "8v4lamk1zTkTJbBSl"
       )
       .then((res) => {
         console.log(res);
