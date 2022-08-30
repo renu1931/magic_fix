@@ -15,7 +15,7 @@ export default function HomePage() {
     emailjs
       .sendForm(
         "service_5x7rego",
-        "template_3kmlhek",
+        "template_2yyry2k",
         e.target,
         "dEtlBLxtNvnbe93oG"
       )
