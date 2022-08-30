@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
 
-function Form() {
+function Form(props) {
   const [qualifiaction, setQualification] = useState("");
   const [working, setWorking] = useState("");
   const [income, setIncome] = useState("");
@@ -20,6 +20,7 @@ function Form() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     mode: "onTouched",
@@ -45,6 +46,11 @@ function Form() {
     localStorage.setItem("physicalstatus", physicalStatus);
     localStorage.setItem("workcity", workCity);
     localStorage.setItem("workingstate", workingState);
+    reset();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -65,6 +71,33 @@ function Form() {
               Your information will help us find the
               <br /> Best Match for you
             </h1>
+            <div id="props-div">
+              <h3 id="props-h3">Your Previously Data</h3>
+              <div id="props-para-flex-div">
+                <div>
+                  <p>Name : {props.name}</p>
+                  <p>Email : {props.email}</p>
+                  <br />
+                  <p>First Name : {props.name}</p>
+                  <p>Last Name : {props.lastname}</p>
+                  <p>Phone : {props.phone}</p>
+                  <p>Email : {props.email}</p>
+                  <p>Address : {props.address}</p>
+                  <p>Mother Tongue : {props.mothertongue}</p>
+                </div>
+                <div>
+                  <p>Phone : {props.phone}</p>
+                  <p>Message : {props.message}</p>
+                  <br />
+                  <p>Country : {props.country}</p>
+                  <p>State : {props.state}</p>
+                  <p>City : {props.city}</p>
+                  <p>Pincode : {props.pincode}</p>
+                  <p>Date of Birth : {props.date}</p>
+                  <p>Age : {props.age}</p>
+                </div>
+              </div>
+            </div>
           </div>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="row">

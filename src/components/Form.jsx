@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import image4 from "../images/image4.jpg";
 import { useForm } from "react-hook-form";
+import FormDetails from "./FormDetails";
 
-function Form() {
-  const [firstName, setFirstName] = useState("");
+function Form(props) {
+  const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -15,10 +16,11 @@ function Form() {
   const [city, setCity] = useState("");
   const [pincode, setPincode] = useState("");
   const [birth, setBirth] = useState("");
-  const [hobby, setHobby] = useState("");
+  const [age, setAge] = useState("");
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     mode: "onTouched",
@@ -27,8 +29,8 @@ function Form() {
   const onSubmit = (data) => {
     console.log(data);
   };
-  const handle = () => {
-    localStorage.setItem("firstname", firstName);
+  const handle = (e) => {
+    localStorage.setItem("firstname", name);
     localStorage.setItem("lastname", lastName);
     localStorage.setItem("email", email);
     localStorage.setItem("phone", phone);
@@ -39,7 +41,12 @@ function Form() {
     localStorage.setItem("city", city);
     localStorage.setItem("pincode", pincode);
     localStorage.setItem("DOB", birth);
-    localStorage.setItem("hobby", hobby);
+    localStorage.setItem("age", age);
+    reset();
+    window.scrollTo({
+      top: 2000,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -60,6 +67,19 @@ function Form() {
               Your information will help us find the
               <br /> Best Match for you
             </h1>
+            <div id="props-div">
+              <h3 id="props-h3">Your Previously Data</h3>
+              <div id="props-para-flex-div">
+                <div>
+                  <p>Name : {props.name}</p>
+                  <p>Email : {props.email}</p>
+                </div>
+                <div>
+                  <p>Phone : {props.phone}</p>
+                  <p>Message : {props.message}</p>
+                </div>
+              </div>
+            </div>
           </div>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="row">
@@ -72,7 +92,7 @@ function Form() {
                   })}
                   name="first_name"
                   id="form-input"
-                  onChange={(e) => setFirstName(e.target.value)}
+                  onChange={(e) => setName(e.target.value)}
                 />
 
                 <div id="homepage-small">
@@ -222,47 +242,59 @@ function Form() {
                     "Date of Birth is Required"}
                 </div>
                 <input
-                  placeholder="Your Hobbies"
+                  placeholder="Your Age"
                   type="text"
-                  {...register("hobbies", {
+                  {...register("age", {
                     required: "true",
                   })}
                   id="form-input"
-                  name="hobbies"
-                  onChange={(e) => setHobby(e.target.value)}
+                  name="age"
+                  onChange={(e) => setAge(e.target.value)}
                 />
                 <div id="homepage-small">
-                  {errors.hobbies?.type === "required" && "Enter Your Hobbies"}
+                  {errors.age?.type === "required" && "Enter Your Age"}
                 </div>
               </div>
             </div>
           </form>
           <div className="text-center pt-4">
-            <Link to="/form-details">
-              <input
-                type="submit"
-                value="Submit"
-                id="input-btn"
-                onClick={handle}
-                disabled={
-                  !firstName ||
-                  !lastName ||
-                  !phone ||
-                  !email ||
-                  !address ||
-                  !motherTongue ||
-                  !country ||
-                  !state ||
-                  !city ||
-                  !pincode ||
-                  !birth ||
-                  !hobby
-                }
-              />
-            </Link>
+            <input
+              type="submit"
+              value="Submit"
+              id="input-btn"
+              onClick={handle}
+              disabled={
+                !name ||
+                !lastName ||
+                !phone ||
+                !email ||
+                !address ||
+                !motherTongue ||
+                !country ||
+                !state ||
+                !city ||
+                !pincode ||
+                !birth ||
+                !age
+              }
+            />
           </div>
         </div>
       </div>
+      <FormDetails
+        name={name}
+        lastname={lastName}
+        phone={phone}
+        email={email}
+        address={address}
+        mothertongue={motherTongue}
+        country={country}
+        state={state}
+        city={city}
+        pincode={pincode}
+        date={birth}
+        age={age}
+      />
     </div>
   );
 }

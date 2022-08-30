@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import { Link } from "react-router-dom";
 import image4 from "../images/image5.jpg";
 import gift_box from "../images/gift_box.png";
 import BrideGroom from "./BrideGroom";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CoupleSlider from "./CoupleSlider";
 import Trusted from "./Trusted";
 import Footer from "./Footer";
+import Form from "./Form";
 
 export default function HomePage() {
   function sendEmail(e) {
@@ -26,14 +25,15 @@ export default function HomePage() {
       .catch((err) => console.log(err));
     e.target.reset();
   }
-  const diffToast = () => {
-    toast.success("Registration Sucessfully!", {
-      position: "top-center",
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 800,
+      behavior: "smooth",
     });
   };
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [Phone, setPhone] = useState("");
+  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   return (
     <div>
@@ -70,11 +70,10 @@ export default function HomePage() {
                 one of India’s leading matrimonial websites that has helped
                 lakhs of members find their perfect life partner.
               </p>
-              <Link to="/form">
-                <button type="button" id="mmw-div-h2-btn">
-                  Register
-                </button>
-              </Link>
+
+              <button type="button" id="mmw-div-h2-btn" onClick={scrollUp}>
+                Register
+              </button>
             </div>
             <div className="col-md-5 pt-5" id="input-div" data-aos="fade-up">
               <h4 id="input-h4">Register & Join</h4>
@@ -107,7 +106,7 @@ export default function HomePage() {
                   <input
                     placeholder="Phone Number"
                     id="input1"
-                    maxLength={10}
+                    type="phone"
                     name="phone"
                     defaultValue=""
                     onChange={(e) => setPhone(e.target.value)}
@@ -125,13 +124,15 @@ export default function HomePage() {
                   />
                 </div>
                 <br></br>
+
                 <input
                   type="submit"
                   value="Submit"
                   id="input-btn"
-                  onClick={diffToast}
-                  disabled={!name || !email || !Phone || !message}
+                  onClick={scrollUp}
+                  disabled={!name || !email || !phone || !message}
                 />
+
                 <br />
                 <p id="magic-fix-terms-conditions">
                   By registering, you agree to our
@@ -142,10 +143,12 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <ToastContainer />
+
+      <Form name={name} email={email} phone={phone} message={message} />
       <BrideGroom />
       <CoupleSlider />
       <Trusted />
+
       <Footer />
     </div>
   );
