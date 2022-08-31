@@ -449,6 +449,28 @@ text-align: end;
   border-radius: 5px;
   }
 
+  #cover {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  margin: 0px 510px;
+  padding: 20px 20px;
+  z-index: 1;
+  border-radius: 50%;
+  }
+  #cover i{
+margin-left: 2px;
+font-size: 23px;
+  }
+.container{
+  position: relative;
+}
+.container-div{
+  position: absolute;
+  left: 10%;
+  bottom: 8%;
+}
+
 /* for responsive home page */
 @media only screen and (max-width: 1198px) {
   #background-black::before {

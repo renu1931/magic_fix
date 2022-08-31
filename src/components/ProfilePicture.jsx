@@ -33,23 +33,34 @@ export default function ProfilePicture() {
           <button>Skip</button>
         </Link>
       </div>
-      <div className="profile_img text-center p-5">
+      <div className="profile_img text-center">
         <div className="flex flex-column justify-content-center align-items-center">
           <h2 id="profile-h2">Select Your Profile Photo</h2>
-          <img
-            style={{
-              width: "200px",
-              height: "200px",
-              borderRadius: "50%",
-              objectFit: "cover",
+          <div className="container">
+            <img
+              style={{
+                width: "200px",
+                height: "200px",
+                borderRadius: "50%",
+                objectFit: "cover",
 
-              border: "4px solid rgb(245, 79, 176)",
-            }}
-            onClick={() => setImagecrop(true)}
-            src={profileFinal.length ? profileFinal : demo}
-            aria-hidden
-            alt="demo-image"
-          />
+                border: "4px solid rgb(245, 79, 176)",
+              }}
+              onClick={() => setImagecrop(true)}
+              src={profileFinal.length ? profileFinal : demo}
+              aria-hidden
+              alt="demo-image"
+            />
+            <div className="container-div" onClick={() => setImagecrop(true)}>
+              <h3 id="cover">
+                {pview ? (
+                  <i class="fa-solid fa-edit"></i>
+                ) : (
+                  <i class="fa-solid fa-camera-rotate"></i>
+                )}
+              </h3>
+            </div>
+          </div>
           <br />
 
           <Dialog
@@ -87,6 +98,7 @@ export default function ProfilePicture() {
               const file = event.target.files[0];
               if (file && file.type.substring(0, 5) === "image") {
                 setImage(file);
+                console.log("image===========>", setImage);
               } else {
                 setImage(null);
               }
