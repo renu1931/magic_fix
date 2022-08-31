@@ -47,10 +47,10 @@ function Form(props) {
     localStorage.setItem("workcity", workCity);
     localStorage.setItem("workingstate", workingState);
     reset();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    // window.scrollTo({
+    //   top: 0,
+    //   behavior: "smooth",
+    // });
   };
 
   return (
@@ -267,7 +267,7 @@ function Form(props) {
             </div>
           </form>
           <div className="text-center pt-4">
-            <Link to="/">
+            <Link to="/profile-picture">
               <input
                 type="submit"
                 value="Submit"

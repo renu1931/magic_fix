@@ -230,7 +230,6 @@
   }
   .btn{
     margin-right: 20px;
-    
     padding: 8px 30px;
     border-radius: 5px;
     font-weight: 900;
@@ -422,6 +421,33 @@ background: #8080804d;
   padding-left: 30px;
   padding-right: 30px;
 }
+.confirmation-content{
+margin-left: 420px;
+}
+#profile-h2{
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+#inputText{
+  border: none;
+  outline: none;
+}
+.update{
+  font-weight: 800;
+  font-size: 19px;
+}
+#skip{
+text-align: end;
+}
+#skip button{
+  margin: 20px;
+  padding: 8px 25px;
+  font-weight: 600;
+  border: none;
+  background-color: rgb(245, 79, 176);
+  color: #fff;
+  border-radius: 5px;
+  }
 
 /* for responsive home page */
 @media only screen and (max-width: 1198px) {
