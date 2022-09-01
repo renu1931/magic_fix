@@ -41,12 +41,12 @@ export default function BrideGroom() {
 
         <div className="row">
           {items.map((elem) => {
-            const { id, name, image, description, age } = elem;
+            const { id, name, image, state, age, qualification } = elem;
             return (
               <div
                 className="col-md-5 mx-auto mb-5"
-                key={id}
                 id="menu-container"
+                key={id}
               >
                 <div className="row pb-5">
                   <div className="col-md-4">
@@ -61,7 +61,9 @@ export default function BrideGroom() {
                   <div className="col-md-8" id="menu-heading-container">
                     <h3 id="menu-h3">{name}</h3>
                     <h5 id="menu-h5">{age}</h5>
-                    <h4 id="menu-h4">{description}</h4>
+                    <h4 id="menu-h4">
+                      {qualification},{state}
+                    </h4>
                   </div>
                 </div>
               </div>

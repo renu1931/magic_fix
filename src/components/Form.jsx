@@ -15,7 +15,7 @@ function Form(props) {
   const [state, setState] = useState("");
   const [city, setCity] = useState("");
   const [pincode, setPincode] = useState("");
-  const [birth, setBirth] = useState("");
+  const [qualification, setQualification] = useState("");
   const [age, setAge] = useState("");
   const {
     register,
@@ -40,7 +40,7 @@ function Form(props) {
     localStorage.setItem("state", state);
     localStorage.setItem("city", city);
     localStorage.setItem("pincode", pincode);
-    localStorage.setItem("DOB", birth);
+    localStorage.setItem("qualification", qualification);
     localStorage.setItem("age", age);
     reset();
     window.scrollTo({
@@ -130,6 +130,7 @@ function Form(props) {
                   {errors.phone?.type === "required" && "Phone is Required"}
                 </div>
                 <input
+                  type="email"
                   placeholder="Enter Email"
                   {...register("user_email", {
                     required: "This Field is Required",
@@ -139,7 +140,6 @@ function Form(props) {
                       message: "Please enter a valid e-mail address",
                     },
                   })}
-                  type="email"
                   id="form-input"
                   name="user_email"
                   onChange={(e) => setEmail(e.target.value)}
@@ -160,16 +160,20 @@ function Form(props) {
                 <div id="homepage-small">
                   {errors.address?.type === "required" && "Address is Required"}
                 </div>
-                <input
+                <select
                   placeholder="Gender"
                   type="text"
-                  {...register("gender", {
+                  {...register("category", {
                     required: "true",
                   })}
-                  id="form-input"
-                  name="gender"
+                  id="form-input1"
+                  name="category"
                   onChange={(e) => setGender(e.target.value)}
-                />
+                >
+                  <option value="">Gender</option>
+                  <option>bride</option>
+                  <option>groom</option>
+                </select>
                 <div id="homepage-small">
                   {errors.gender?.type === "required" && "Gender is Required"}
                 </div>
@@ -227,18 +231,26 @@ function Form(props) {
                 <div id="homepage-small">
                   {errors.pincode?.type === "required" && "Pincode is Required"}
                 </div>
-                <input
-                  placeholder="Date of Birth"
-                  id="form-input"
-                  {...register("birth", {
+                <select
+                  placeholder="Enter Qualifications"
+                  type="text"
+                  {...register("qualification", {
                     required: "true",
                   })}
-                  name="birth"
-                  onChange={(e) => setBirth(e.target.value)}
-                />
+                  name="qualification"
+                  id="form-input"
+                  onChange={(e) => setQualification(e.target.value)}
+                >
+                  <option value="">Qualifications</option>
+                  <option>Graduate</option>
+                  <option>Under Graduation</option>
+                  <option>Post Graduate</option>
+                  <option>Master Degree</option>
+                </select>
+
                 <div id="homepage-small">
-                  {errors.birth?.type === "required" &&
-                    "Date of Birth is Required"}
+                  {errors.qualification?.type === "required" &&
+                    "Qualification is Required"}
                 </div>
                 <input
                   placeholder="Your Age"
@@ -273,7 +285,7 @@ function Form(props) {
                 !state ||
                 !city ||
                 !pincode ||
-                !birth ||
+                !qualification ||
                 !age
               }
             />
@@ -291,7 +303,7 @@ function Form(props) {
         state={state}
         city={city}
         pincode={pincode}
-        date={birth}
+        qualification={qualification}
         age={age}
       />
     </div>

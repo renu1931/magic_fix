@@ -181,6 +181,19 @@
     font-weight: 900;
     color: black;
   }
+  #form-input1 {
+    width: 98%;
+    background: rgb(255, 245, 245);
+   padding-top: 14px;
+    padding-bottom: 12px;
+    /* margin-bottom: 15px; */
+    padding-left: 1rem;
+    outline: 1px solid rgb(196, 194, 194);
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+    color: black;
+  }
   #input {
     border-radius: 5px;
     margin-top: 15px;
