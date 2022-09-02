@@ -18,7 +18,7 @@
     color: #fff;
     background-color:#0000005c;
     position: absolute;
-    height: 649px;
+    height: 654px;
     width: 100%;
   }
   #mmw-img-div {
@@ -42,6 +42,11 @@
     background-position: center;
   }
   #mmw-logo {
+    height: 60px;
+    padding-top: 10px;
+    cursor: pointer;
+  }
+  #mmw-logo1{
     height: 60px;
     padding-top: 10px;
     cursor: pointer;
@@ -506,6 +511,16 @@ font-size: 23px;
       height: 350px;
     }
 }
+@media only screen and (max-width: 988px) {
+  #mmw-logo1{
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  #mmw-logo1{
+    height: 100px;
+  }
+}
 @media only screen and (max-width: 766px) {
   #input-div{
     margin-right: 80px;
@@ -551,32 +566,65 @@ font-size: 23px;
     margin-left: -25px;
     }
     #background-black::before {
-      height: 1035px;
+      height: 1114px;
      }
 }
 @media only screen and (max-width: 400px) {
   #background-black::before {
-      height: 1035px;
+      height: 1114px;
      }
      #props-div{
       margin-left: 13px;
      }
+     #cover{
+      margin: 0px 205px;
+     }
+     .confirmation-content{
+      margin-left: 0px;
+      }
 }
 @media only screen and (max-width: 540px) {
   
      #props-div{
       margin-left: 19px;
      }
+     
 }
 @media only screen and (max-width: 375px) {
   #background-black::before {
     height: 1115px;
    }
 }
-
+@media only screen and (max-width: 820px) {
+  #cover{
+    margin: -11px 328px;
+   }
+   .confirmation-content{
+    margin-left: 0px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+  #cover{
+    margin: -11px 417px;
+   }
+   .confirmation-content{
+    margin-left: 0px;
+    }
+}
+@media only screen and (max-width: 912px) {
+  #cover{
+    margin: -11px 250px;
+   }
+   .confirmation-content{
+    margin-left: 0px;
+    }
+}
 @media only screen and (max-width: 414px) {
   #background-black::before {
-    height: 1115px;
+    height: 1037px;
+   }
+   #mmw-logo1{
+    height: 100px;
    }
    #input-div{
     margin-right: 20px;
@@ -585,10 +633,22 @@ font-size: 23px;
     #props-div{
       margin-left: 13px;
      }
+     #cover{
+      margin: 0px 205px;
+     }
+     .confirmation-content{
+      margin-left: 0px;
+      }
 }
 @media only screen and (max-width: 400px) {
   #background-black::before {
-    height: 1035px;
+    height: 1037px;
+   }
+   
+}
+@media only screen and (max-width: 360px) {
+  #background-black::before {
+    height: 1113px;
    }
    
 }
@@ -603,5 +663,11 @@ font-size: 23px;
    #slider-image{
     height: 200px;
   }
+  #cover{
+    margin: 0px 155px;
+   }
+   .confirmation-content{
+    margin-left: 0px;
+    }
 }
 

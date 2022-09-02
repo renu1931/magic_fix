@@ -34,7 +34,7 @@ function Form(props) {
   };
   const handle = () => {
     swal({
-      title: "Registration Successfully!!",
+      title: "Registration Successfull!!",
       text: "Thanks For Visiting!",
       icon: "success",
       button: "OK!",
@@ -52,11 +52,13 @@ function Form(props) {
     localStorage.setItem("workingstate", workingState);
     localStorage.setItem("mothertongue", mothertongue);
     reset();
+
     // window.scrollTo({
     //   top: 0,
     //   behavior: "smooth",
     // });
   };
+
   const object = {
     image: user,
     name: props.name,
@@ -68,7 +70,7 @@ function Form(props) {
 
   if (props.gender === object.category) {
     Menu.push(object);
-    console.log("male=============>", { Menu });
+    console.log("male=============>", Menu);
   }
 
   return (
@@ -289,7 +291,7 @@ function Form(props) {
                   })}
                   name="currency"
                   maxLength={10}
-                  id="form-input"
+                  id="form-input1"
                   onChange={(e) => setCurrency(e.target.value)}
                 >
                   <option value="">Currency</option>

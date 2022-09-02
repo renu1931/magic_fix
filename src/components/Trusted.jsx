@@ -8,7 +8,7 @@ export default function Trusted() {
       <div className="container text-center py-5 my-3">
         <div className="row">
           <div className="col-md-11 m-auto">
-            <img src={gift_box} alt="s-icon -pic" id="mmw-logo" />
+            <img src={gift_box} alt="s-icon -pic" id="mmw-logo1" />
             <h3 id="trusted-h3">
               Magic Fix - Trusted by over 35 Million Members
             </h3>

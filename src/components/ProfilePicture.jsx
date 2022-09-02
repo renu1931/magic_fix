@@ -70,8 +70,8 @@ export default function ProfilePicture() {
           >
             <div className="confirmation-content">
               <Avatar
-                width={500}
-                height={400}
+                width={400}
+                height={300}
                 onCrop={onCrop}
                 onClose={onClose}
                 src={src}

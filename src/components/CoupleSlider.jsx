@@ -8,6 +8,26 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 export default function CoupleSlider() {
+  const Option = {
+    items: 1,
+    nav: true,
+    navText: [
+      "<i class='fa fa-chevron-left prew-slide'></i>",
+      "<i class='fa fa-chevron-right prew-slide'></i>",
+      "color:white",
+    ],
+    center: true,
+    autoplay: true,
+    TimeRanges: 5,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      1000: {
+        item: 1,
+      },
+    },
+  };
   return (
     <div>
       {/*event section start */}
@@ -24,7 +44,13 @@ export default function CoupleSlider() {
         <div className="container" style={{ color: "white" }}>
           <div className="row">
             <div className="col-md-12">
-              <OwlCarousel className="owl-theme" loop margin={60} items={1}>
+              <OwlCarousel
+                {...Option}
+                dots={false}
+                className="owl-theme"
+                loop
+                margin={50}
+              >
                 <div className="item">
                   <h1 className="text-center pb-5" id="organise-h1">
                     Millions have found their <span>Life Partner </span> at
