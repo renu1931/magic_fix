@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
 import user from "../images/user.jpg";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function Form(props) {
   const [birth, setBirth] = useState("");
@@ -19,7 +20,7 @@ function Form(props) {
   const [workingState, setWorkingState] = useState("");
   const [mothertongue, setMothertongue] = useState("");
   const [rassi, setRassi] = useState("");
-
+  const [verified, setVerified] = useState(false);
   const {
     register,
     handleSubmit,
@@ -32,6 +33,10 @@ function Form(props) {
   const onSubmit = (data) => {
     console.log(data);
   };
+  function onChange(value) {
+    console.log("Captcha value:", value);
+    setVerified(true);
+  }
   const handle = () => {
     swal({
       title: "Registration Successfull!!",
@@ -137,7 +142,6 @@ function Form(props) {
                   {errors.birth?.type === "required" &&
                     "Date of Birth is Required"}
                 </div>
-
                 <select
                   placeholder="Working (Job)"
                   type="text"
@@ -156,7 +160,6 @@ function Form(props) {
                   <option>Self-employed</option>
                   <option>Not Working</option>
                 </select>
-
                 <div id="homepage-small">
                   {errors.working?.type === "required" && "Working is Required"}
                 </div>
@@ -448,6 +451,10 @@ function Form(props) {
                   {errors.rassi?.type === "required" && "Rassi is Required"}
                 </div>
               </div>
+              <ReCAPTCHA
+                sitekey="6LcSRswhAAAAAOlLRGxB-ypgKYTgLV-oI_Hfg-m_"
+                onChange={onChange}
+              />
             </div>
           </form>
           <div className="text-center pt-4">
