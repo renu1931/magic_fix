@@ -452,7 +452,8 @@ function Form(props) {
                 </div>
               </div>
               <ReCAPTCHA
-                sitekey="6LcSRswhAAAAAOlLRGxB-ypgKYTgLV-oI_Hfg-m_"
+                className="mx-5 px-3 mt-3"
+                sitekey="6LdwlcwhAAAAAK7Tf2y3oMT-PM7X91G472lmjXiw"
                 onChange={onChange}
               />
             </div>
@@ -476,7 +477,8 @@ function Form(props) {
                   !mothertongue ||
                   !physicalStatus ||
                   !workCity ||
-                  !workingState
+                  !workingState ||
+                  !verified
                 }
               />
             </Link>
