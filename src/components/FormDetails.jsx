@@ -64,19 +64,19 @@ function Form(props) {
     // });
   };
 
-  const object = {
-    image: user,
-    name: props.name,
-    age: props.age,
-    qualification: props.qualification,
-    state: props.state,
-    category: props.gender,
-  };
+  // const object = {
+  //   image: user,
+  //   name: props.name,
+  //   age: props.age,
+  //   qualification: props.qualification,
+  //   state: props.state,
+  //   category: props.gender,
+  // };
 
-  if (props.gender === object.category) {
-    Menu.push(object);
-    console.log("male=============>", Menu);
-  }
+  // if (props.gender === object.category) {
+  //   Menu.push(object);
+  //   console.log("male=============>", Menu);
+  // }
 
   return (
     <div>
